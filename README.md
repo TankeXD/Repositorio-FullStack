@@ -1,3 +1,3 @@
-"## 🚀 Uso"  
-"Cada Carpeta contiene un proyecto independiente "  
-"Revisa el README dentro de cada uno de los proyectos"  
+# 🚀 Uso  
+Cada Carpeta contiene un proyecto independiente 
+Revisa el README dentro de cada uno de los proyectos  
