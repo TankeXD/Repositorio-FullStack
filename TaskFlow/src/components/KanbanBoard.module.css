@@ -1,0 +1,137 @@
+.boardContainer {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.column {
+  padding: 1.5rem;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+.columnHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.badge {
+  background: var(--surface-hover);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.taskCard {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05) !important;
+  cursor: grab;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.taskCard:active {
+  cursor: grabbing;
+}
+
+.taskCard:hover {
+  border-color: var(--primary);
+  transform: scale(1.02);
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  padding: 0 0.25rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.taskCard:hover .deleteBtn {
+  opacity: 1;
+}
+
+.deleteBtn:hover {
+  color: #ef4444;
+}
+
+.addBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.addBtn:hover {
+  background: var(--surface-hover);
+  color: var(--text-main);
+  border-style: solid;
+}
+
+.addTaskForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--primary);
+}
+
+.input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.formActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.formActions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
